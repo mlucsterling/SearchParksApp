@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+    margin-left: 7px;
+}
+
+form {
+    width: 50%;
+}
+
+.states-list {
+    display: inline-block;
+    list-style: none;
+}
+
+input[type=checkbox] {
+    visibility: hidden;
+}
+
+input[type=checkbox]:hover {
+    cursor: inherit;
+}
+
+input:checked + label {
+    background-color: yellow;
+    font-weight: bold;
+}
