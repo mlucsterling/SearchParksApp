@@ -14,115 +14,14 @@
         <ol>
             <li>Type in the states you want to see national parks in. Be sure to use each state's two-letter abbreviation. To search for parks in multiple states, separate each entry with a comma.</li>
             <li>Enter the maximum number of results you want (Default: 10).</li>
-            <li>Click "Submit" and view the results at the bottom.</li>
+            <li>Click the "Search" button.</li>
+            <li>Wait a few moments, then view the results at the bottom.</li>
         </ol>
         <br>
         
         <form>
                 <h3>Search for Parks in...</h3>
                 <input type ="text" placeholder="CA" id="stateInput" class="check-form" name="stateBox">
-                <!--<ul class="states-list">
-                    <input type="checkbox" id="state1" class="check-form" name="stateCheckbox" value="AL">
-                        <label for="state1">Alabama</label>
-                    <input type="checkbox" id="state2" class="check-form" name="stateCheckbox" value="AK">
-                        <label for="state2">Alaska</label>
-                    <input type="checkbox" id="state3" class="check-form" name="stateCheckbox" value="AZ">
-                        <label for="state3">Arizona</label>
-                    <input type="checkbox" id="state4" class="check-form" name="stateCheckbox" value="AR">
-                        <label for="state4">Arkansas</label>
-                    <input type="checkbox" id="state5" class="check-form" name="stateCheckbox" value="CA">
-                        <label for="state5">California</label><br>
-                    <input type="checkbox" id="state6" class="check-form" name="stateCheckbox" value="CO">
-                        <label for="state6">Colorado</label>
-                    <input type="checkbox" id="state7" class="check-form" name="stateCheckbox" value="CT">
-                        <label for="state7">Connecticut</label>
-                    <input type="checkbox" id="state8" class="check-form" name="stateCheckbox" value="DE">
-                        <label for="state8">Delaware</label>
-                    <input type="checkbox" id="state9" class="check-form" name="stateCheckbox" value="FL">
-                        <label for="state9">Florida</label>
-                    <input type="checkbox" id="state10" class="check-form" name="stateCheckbox" value="GA">
-                        <label for="state10">Georgia</label><br>
-                    <input type="checkbox" id="state11" class="check-form" name="stateCheckbox" value="HI">
-                        <label for="state11">Hawaii</label>
-                    <input type="checkbox" id="state12" class="check-form" name="stateCheckbox" value="ID">
-                        <label for="state12">Idaho</label>
-                    <input type="checkbox" id="state13" class="check-form" name="stateCheckbox" value="IL">
-                        <label for="state13">Illinois</label>
-                    <input type="checkbox" id="state14" class="check-form" name="stateCheckbox" value="IN">
-                        <label for="state14">Indiana</label>
-                    <input type="checkbox" id="state15" class="check-form" name="stateCheckbox" value="IA">
-                        <label for="state15">Iowa</label><br>
-                    <input type="checkbox" id="state16" class="check-form" name="stateCheckbox" value="KS">
-                        <label for="state16">Kansas</label>
-                    <input type="checkbox" id="state17" class="check-form" name="stateCheckbox" value="KY">
-                        <label for="state17">Kentucky</label>
-                    <input type="checkbox" id="state18" class="check-form" name="stateCheckbox" value="LA">
-                        <label for="state18">Louisiana</label>
-                    <input type="checkbox" id="state19" class="check-form" name="stateCheckbox" value="ME">
-                        <label for="state19">Maine</label>
-                    <input type="checkbox" id="state20" class="check-form" name="stateCheckbox" value="MD">
-                        <label for="state20">Maryland</label><br>
-                    <input type="checkbox" id="state21" class="check-form" name="stateCheckbox" value="MA">
-                        <label for="state21">Massachusetts</label>
-                    <input type="checkbox" id="state22" class="check-form" name="stateCheckbox" value="MI">
-                        <label for="state22">Michigan</label>
-                    <input type="checkbox" id="state23" class="check-form" name="stateCheckbox" value="MN">
-                        <label for="state23">Minnesota</label>
-                    <input type="checkbox" id="state24" class="check-form" name="stateCheckbox" value="MS">
-                        <label for="state24">Mississippi</label>
-                    <input type="checkbox" id="state25" class="check-form" name="stateCheckbox" value="MO">
-                        <label for="state25">Missouri</label><br>
-                    <input type="checkbox" id="state26" class="check-form" name="stateCheckbox" value="MT">
-                        <label for="state26">Montana</label>
-                    <input type="checkbox" id="state27" class="check-form" name="stateCheckbox" value="NE">
-                        <label for="state27">Nebraska</label>
-                    <input type="checkbox" id="state28" class="check-form" name="stateCheckbox" value="NV">
-                        <label for="state28">Nevada</label>
-                    <input type="checkbox" id="state29" class="check-form" name="stateCheckbox" value="NH">
-                        <label for="state29">New Hampshire</label>
-                    <input type="checkbox" id="state30" class="check-form" name="stateCheckbox" value="NJ">
-                        <label for="state30">New Jersey</label><br>
-                    <input type="checkbox" id="state31" class="check-form" name="stateCheckbox" value="NM">
-                        <label for="state31">New Mexico</label>
-                    <input type="checkbox" id="state32" class="check-form" name="stateCheckbox" value="NY">
-                        <label for="state32">New York</label>
-                    <input type="checkbox" id="state33" class="check-form" name="stateCheckbox" value="NC">
-                        <label for="state33">North Carolina</label>
-                    <input type="checkbox" id="state34" class="check-form" name="stateCheckbox" value="ND">
-                        <label for="state34">North Dakota</label>
-                    <input type="checkbox" id="state35" class="check-form" name="stateCheckbox" value="OH">
-                        <label for="state35">Ohio</label><br>
-                    <input type="checkbox" id="state36" class="check-form" name="stateCheckbox" value="OK">
-                        <label for="state36">Oklahoma</label>
-                    <input type="checkbox" id="state37" class="check-form" name="stateCheckbox" value="OR">
-                        <label for="state37">Oregon</label>
-                    <input type="checkbox" id="state38" class="check-form" name="stateCheckbox" value="PA">
-                        <label for="state38">Pennsylvania</label>
-                    <input type="checkbox" id="state39" class="check-form" name="stateCheckbox" value="RI">
-                        <label for="state39">Rhode Island</label>
-                    <input type="checkbox" id="state40" class="check-form" name="stateCheckbox" value="SC">
-                        <label for="state40">South Carolina</label><br>
-                    <input type="checkbox" id="state41" class="check-form" name="stateCheckbox" value="SD">
-                        <label for="state41">South Dakota</label>
-                    <input type="checkbox" id="state42" class="check-form" name="stateCheckbox" value="TN">
-                        <label for="state42">Tennessee</label>
-                    <input type="checkbox" id="state43" class="check-form" name="stateCheckbox" value="TX">
-                        <label for="state43">Texas</label>
-                    <input type="checkbox" id="state44" class="check-form" name="stateCheckbox" value="UT">
-                        <label for="state44">Utah</label>
-                    <input type="checkbox" id="state45" class="check-form" name="stateCheckbox" value="VT">
-                        <label for="state45">Vermont</label><br>
-                    <input type="checkbox" id="state46" class="check-form" name="stateCheckbox" value="VA">
-                        <label for="state46">Virginia</label>
-                    <input type="checkbox" id="state47" class="check-form" name="stateCheckbox" value="WA">
-                        <label for="state47">Washington</label>
-                    <input type="checkbox" id="state48" class="check-form" name="West Virginia" value="WV">
-                        <label for="state48">West Virginia</label>
-                    <input type="checkbox" id="state49" class="check-form" name="Wisconsin" value="WI">
-                        <label for="state49">Wisconsin</label>
-                    <input type="checkbox" id="state50" class="check-form" name="Wyoming" value="WY">
-                        <label for="state50">Wyoming</label><br>
-                </ul>-->
             <br>
             <br>
 

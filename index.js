@@ -1,19 +1,9 @@
 'use strict';
 
-/*obtain checked States from form*/
-function checkStates() {
-    let stateArray = [];
-    $(".check-form:checked").each(function() {
-        stateArray.push(this.value);
-    });
-    let statesURL = '?stateCode='+stateArray.join('%2C');
-    console.log(statesURL);
-}
-
 /*obtain text input from form*/
 function getStates() {
     console.log('getStates activated');
-    let stateParam = document.getElementById('stateInput').val();
+    let stateParam = document.getElementById('stateInput').value;
     makeRequest(stateParam);
 }
 
@@ -21,7 +11,7 @@ function getStates() {
 function makeRequest(stateParam) {
     console.log(`makeRequest activated`);
     const APIKey = '&api_key=Lv9ibCPJUkl5miprpeF6HhBsy6vTHn3OwutWceqi'
-    let requestAPI = 'https://developer.nps.gov/api/v1/parks'+stateParam+APIKey
+    let requestAPI = 'https://developer.nps.gov/api/v1/parks?stateCode='+stateParam+APIKey
     fetch(requestAPI)
         .then(response => response.json())
         .then(responseJson => createList(responseJson))
@@ -45,13 +35,17 @@ function createList(responseJson) {
     console.log(responseJson);
     console.log(`createList activated`);
     $(`.results-list`).empty();
-        for (let i=0; i < responseJson.length; i++) {
+    let resultsLimit = $('#maxResults').val();
+    console.log(resultsLimit);
+        for (let i=0; i < resultsLimit; i++) {
             console.log('creating list item');
-            let repoURL = responseJson[i].html_url
-            let repoName = responseJson[i].name
+            let parkName = responseJson.data[i].fullName
+            let parkURL = responseJson.data[i].url
+            let parkDesc = responseJson.data[i].description
             $(`.results-list`).append(`<li>
-            <h4>${repoName}</h4>
-            <a href="${repoURL}">Click here for repository</a>
+            <h4>${parkName}</h4>
+            <a href="${parkURL}">Click here for ${parkName}'s website</a>
+            <p>${parkDesc}</p>
             </li>`);
     };
 };
